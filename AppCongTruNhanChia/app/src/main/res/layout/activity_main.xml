@@ -127,8 +127,8 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="63dp"
-        android:layout_height="30dp"
+        android:layout_width="97dp"
+        android:layout_height="35dp"
         android:layout_marginStart="71dp"
         android:layout_marginTop="25dp"
         android:background="#FFFFFF"
@@ -147,6 +147,7 @@
         android:background="#FFFFFF"
         android:ems="10"
         android:inputType="text"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
