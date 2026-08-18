@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    //Đây là bộ lắng nghe và xử lý sự kiện Cộng
+    //Lắng nghe và xử lý sự kiện Cộng
     public void XuLyCong(View view) {
         //Tìm tham chiếu đến điều khiển trên tệp XML, mapping sang java file
         EditText editTextSoA = findViewById(R.id.edtA);
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         editTextKetQua.setText(strTong);
     }
 
-    //Đây là bộ lắng nghe và xử lý sự kiện Trừ
+    //Lắng nghe và xử lý sự kiện Trừ
     public void XuLyTru(View view) {
         //Tìm tham chiếu đến điều khiển trên tệp XML, mapping sang java file
         EditText editTextSoA = findViewById(R.id.edtA);
@@ -68,5 +68,51 @@ public class MainActivity extends AppCompatActivity {
         editTextKetQua.setText(strHieu);
     }
 
+    //Lắng nghe và xử lý sự kiện Nhân
+    public void XuLyNhan(View view) {
+        //Tìm tham chiếu đến điều khiển trên tệp XML, mapping sang java file
+        EditText editTextSoA = findViewById(R.id.edtA);
+        EditText editTextSoB = findViewById(R.id.edtB);
+        EditText editTextKetQua = findViewById(R.id.edtKQ);
+        //Lấy dữ liệu về ở điều khiển số a
+        String strA = editTextSoA.getText().toString();
+        //Lấy dữ liệu về ở điều khiển số b
+        String strB = editTextSoB.getText().toString();
+
+        //Chuyển dữ liệu sang dạng số
+        int so_A = Integer.parseInt(strA);  //2
+        int so_B = Integer.parseInt(strB);  //4
+
+        //Tính toán theo yêu cầu
+        int tich = so_A * so_B;
+        String strTich = String.valueOf(tich);
+        //Hiện ra màn hình
+        editTextKetQua.setText(strTich);
+    }
+
+    //Lắng nghe và xử lý sự kiện Chia
+    public void XuLyChia(View view) {
+        //Tìm tham chiếu đến điều khiển trên tệp XML, mapping sang java file
+        EditText editTextSoA = findViewById(R.id.edtA);
+        EditText editTextSoB = findViewById(R.id.edtB);
+        EditText editTextKetQua = findViewById(R.id.edtKQ);
+        //Lấy dữ liệu về ở điều khiển số a
+        String strA = editTextSoA.getText().toString();
+        //Lấy dữ liệu về ở điều khiển số b
+        String strB = editTextSoB.getText().toString();
+
+        //Chuyển dữ liệu sang dạng số
+        int so_A = Integer.parseInt(strA);  //2
+        int so_B = Integer.parseInt(strB);  //4
+
+        //Tính toán theo yêu cầu
+        String strThuong;
+        if (so_B != 0) {
+            double thuong = (double) so_A / (double) so_B;
+            strThuong = String.valueOf(thuong);
+        } else strThuong = "Vui lòng nhập số B khác 0";
+        //Hiện ra màn hình
+        editTextKetQua.setText(strThuong);
+    }
 
 }
