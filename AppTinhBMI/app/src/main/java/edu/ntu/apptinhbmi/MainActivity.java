@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         EditText editTextCanNang = findViewById(R.id.edtWeight);
         EditText editTextChieuCao = findViewById(R.id.edtHeight);
         EditText editTextKetQua = findViewById(R.id.edtKQ);
+        EditText editTextPhanLoai = findViewById(R.id.phanLoai);
 
         //Lấy dữ liệu về ở điều khiển Cân nặng
         String strWeight = editTextCanNang.getText().toString().trim();
@@ -60,11 +61,32 @@ public class MainActivity extends AppCompatActivity {
 
             //Tính chỉ số BMI
             double bmi = Weight / (Height * Height);
+
+            //phân loại chỉ số BMI theo WHO
+            String phanLoai = "";
+            if (bmi < 18.5) {
+                phanLoai = "Cân nặng thấp (gầy)";
+            } else if (bmi < 25) {
+                phanLoai = "Bình thường";
+            } else if (bmi == 25) {
+                phanLoai = "Thừa cân";
+            } else if (bmi <= 29.9) {
+                phanLoai = "Tiền Béo phì";
+            } else if (bmi <= 34.9) {
+                phanLoai = "Béo phì độ 1";
+            } else if (bmi <= 39.9) {
+                phanLoai = "Béo phì độ 2";
+            } else { phanLoai = "Béo phì độ 3";}
+
             String strBMI = String.format(Locale.US,"%.2f", bmi);
+            String strPL = String.format("%s", phanLoai);
             //Hiển thị kết quả ra màn hình
             editTextKetQua.setText(strBMI);
+            editTextPhanLoai.setText(strPL);
         } catch (NumberFormatException e) {
             Toast.makeText(this, "Dữ liệu nhập vào không hợp lệ", Toast.LENGTH_SHORT).show();
         }
+
+
     }
 }
