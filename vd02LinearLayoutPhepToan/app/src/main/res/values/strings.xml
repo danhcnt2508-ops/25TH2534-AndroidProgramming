@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">vd02LinearLayoutPhepToan</string>
+    <string name="sothunhat">Số thứ nhất:</string>
+    <string name="nhapmotso">Mới nhập 1 con số ở đây</string>
+    <string name="Sothuhai">Số thứ hai:</string>
+    <string name="cong">Cộng</string>
+    <string name="tru">Trừ</string>
+    <string name="nhan">Nhân</string>
+    <string name="chia">Chia</string>
 </resources>

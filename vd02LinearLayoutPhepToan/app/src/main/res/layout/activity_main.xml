@@ -1,28 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:padding="5dp"
+        android:orientation="horizontal"
         android:layout_marginTop="15dp"
-        android:layout_height="50dp"
-
+        android:layout_height="50dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Số thứ nhất"
-            android:textSize="18dp"
-            android:textColor="@color/purple_500"/>
+            android:text="@string/sothunhat"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+
         <EditText
-            android:layout_width="match_parent"
+            android:autofillHints=""
+            android:paddingLeft="15dp"
+            android:layout_width="251dp"
             android:layout_height="match_parent"
-            android:hint="Mới nhập 1 con số ở đây"
-            />
+            android:hint="@string/nhapmotso"/>
+
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Sothuhai"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+
+        <EditText
+            android:paddingStart="25dp"
+            android:layout_width="254dp"
+            android:layout_height="match_parent"
+            android:hint="@string/nhapmotso"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_height="50dp">
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="@string/cong"/>
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dpdp"
+            android:text="@string/tru"/>
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dpdp"
+            android:text="@string/nhan"/>
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="@string/chia" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kết quả: "
+            android:textColor="@color/purple_500"
+            android:textSize="18dp"
+            android:padding="10dp"/>
+
+        <EditText
+            android:paddingLeft="25dp"
+            android:layout_width="254dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
 </LinearLayout>
