@@ -22,11 +22,12 @@
             android:padding="10dp"/>
 
         <EditText
-            android:autofillHints=""
-            android:paddingLeft="15dp"
+            android:id="@+id/edtSoThuNhat"
             android:layout_width="251dp"
             android:layout_height="match_parent"
-            android:hint="@string/nhapmotso"/>
+            android:autofillHints=""
+            android:hint="@string/nhapmotso"
+            android:paddingLeft="15dp" />
 
     </LinearLayout>
 
@@ -45,10 +46,12 @@
             android:padding="10dp"/>
 
         <EditText
-            android:paddingStart="25dp"
+            android:id="@+id/edtSoThuHai"
             android:layout_width="254dp"
             android:layout_height="match_parent"
-            android:hint="@string/nhapmotso"/>
+            android:hint="@string/nhapmotso"
+            android:onClick="PhepTru"
+            android:paddingStart="25dp" />
 
     </LinearLayout>
 
@@ -62,30 +65,38 @@
         android:layout_height="50dp">
 
         <Button
+            android:id="@+id/btnCong"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="PhepCong"
             android:paddingLeft="20dp"
-            android:text="@string/cong"/>
+            android:text="@string/cong" />
 
         <Button
+            android:id="@+id/btnTru"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dpdp"
-            android:text="@string/tru"/>
+            android:onClick="PhepTru"
+            android:paddingLeft="20dp"
+            android:text="@string/tru" />
 
         <Button
+            android:id="@+id/btnNhan"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="30dpdp"
-            android:text="@string/nhan"/>
+            android:onClick="PhepNhan"
+            android:paddingLeft="30dp"
+            android:text="@string/nhan" />
 
         <Button
+            android:id="@+id/btnChia"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="PhepChia"
             android:paddingLeft="20dp"
             android:text="@string/chia" />
     </LinearLayout>
@@ -105,9 +116,10 @@
             android:padding="10dp"/>
 
         <EditText
-            android:paddingLeft="25dp"
-            android:layout_width="254dp"
-            android:layout_height="match_parent"/>
+            android:id="@+id/edtKQ"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="25dp" />
 
     </LinearLayout>
 
