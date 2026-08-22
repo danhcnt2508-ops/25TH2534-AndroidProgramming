@@ -77,8 +77,6 @@ public class MainActivity extends AppCompatActivity {
            //lây giá trị của phần tử thứ i
             String tenTinhChon = dsTenTinhThanhVN.get(i);
             Toast.makeText(MainActivity.this, tenTinhChon, Toast.LENGTH_LONG).show();
-
-
         }
     };
 }
