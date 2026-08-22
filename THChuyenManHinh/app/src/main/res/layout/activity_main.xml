@@ -28,6 +28,7 @@
         android:layout_marginStart="115dp"
         android:layout_marginTop="84dp"
         android:layout_marginEnd="115dp"
+        android:onClick="ChuyenSangMH2"
         android:text="CHUYỂN SANG MH 2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
