@@ -40,4 +40,6 @@ public class MainActivity extends AppCompatActivity {
         //2. Gửi thư mà ko cần phản hồi
         startActivity(thuKichHoatMH2);
     }
+
+
 }
