@@ -1,20 +1,20 @@
 package edu.ntu.danhtm2534_usingrecycleview;
 
 public class LandScape {
-    String landIamgeFileName;
+    String landImageFileName;
     String landCation;
 
-    public LandScape(String landIamgeFileName, String landCation) {
-        this.landIamgeFileName = landIamgeFileName;
+    public LandScape(String landImageFileName, String landCation) {
+        this.landImageFileName = landImageFileName;
         this.landCation = landCation;
     }
 
-    public String getLandIamgeFileName() {
-        return landIamgeFileName;
+    public String getLandImageFileName() {
+        return landImageFileName;
     }
 
-    public void setLandIamgeFileName(String landIamgeFileName) {
-        this.landIamgeFileName = landIamgeFileName;
+    public void setLandImageFileName(String landImageFileName) {
+        this.landImageFileName = landImageFileName;
     }
 
     public String getLandCation() {
