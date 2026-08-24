@@ -42,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         dsDuLieu.add(landScape1);
         dsDuLieu.add( new LandScape("sydneyoperahouse", "Nhà hát Sydney ÚC"));
         dsDuLieu.add( new LandScape("tour_eiffel_at_sunrise_from_the_trocadero", "Tháp Eiffel - Pháp"));
+        dsDuLieu.add(new LandScape("statue_de_la_liberte_new_york", "Tượng nữ thần tự do - Mỹ"));
+        dsDuLieu.add(new LandScape("the_great_wall_of_china", "Vạn lý trường thành - Trung Quôc"));
+        dsDuLieu.add(new LandScape("colosseum_in_rome_italy", "Đấu trường La Mã - Ý"));
         return dsDuLieu;
     }
 }
