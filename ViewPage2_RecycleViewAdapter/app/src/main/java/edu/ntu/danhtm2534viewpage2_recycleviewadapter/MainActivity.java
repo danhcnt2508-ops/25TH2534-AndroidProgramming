@@ -3,6 +3,8 @@ package edu.ntu.danhtm2534viewpage2_recycleviewadapter;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,7 +14,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     LandScapeAdapter landScapeAdapter;
-    ArrayList<LandScape> recyclerViewDatas;
+    ArrayList<LandScape> viewPagerDatas;
     ViewPager2 viewPager2Land;
 
     @Override
@@ -20,9 +22,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        viewPagerDatas = getDataForViewPager();
+        viewPager2Land = findViewById(R.id.vp2Land);
+        landScapeAdapter = new LandScapeAdapter(this, viewPagerDatas);
+        viewPager2Land.setAdapter(landScapeAdapter);
+        viewPager2Land.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
+            }
 
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+            }
 
-    }
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                super.onPageScrollStateChanged(state);
+            }
+
+        });
 
     ArrayList<LandScape> getDataForViewPager() {
         ArrayList<LandScape> dsDuLieu = new ArrayList<>();
