@@ -2,31 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MÀN HÌNH CHÍNH Ở ĐÂY"
+        android:layout_marginTop="50dp"
+        android:padding="20dp"
+        android:text="TRANG CHỦ"
         android:textSize="20dp"
-        android:textStyle="bold"
-        android:padding="20dp"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnMH2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Màn hình 2"
-        />
+        android:text="Chuyển màn hình 2" />
+
     <Button
         android:id="@+id/btnMH3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Màn hình 3"
-        />
+        android:text="Chuyển màn hình 3" />
 
 </LinearLayout>
