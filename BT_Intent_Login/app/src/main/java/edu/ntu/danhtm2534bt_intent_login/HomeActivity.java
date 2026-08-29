@@ -1,6 +1,8 @@
 package edu.ntu.danhtm2534bt_intent_login;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +17,14 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
+
+        //lấy Internt về
+        Intent intentTuLogin = getIntent();
+        //Lo ra lấy dữ liệu
+        String tenDN_NhanDuoc = intentTuLogin.getStringExtra("ten_dang_nhap");
+        //gán vào điều khiển
+        TextView tvTenDN = (TextView) findViewById(R.id.tvUserName);
+        tvTenDN.setText(tenDN_NhanDuoc);
 
     }
 }
