@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        viewPagerDatas = getDataForViewPager();
+        viewPagerDatas = getDataForViewPaper();
         viewPager2Land = findViewById(R.id.vp2Land);
         landScapeAdapter = new LandScapeAdapter(this, viewPagerDatas);
         viewPager2Land.setAdapter(landScapeAdapter);
@@ -44,12 +44,15 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-    ArrayList<LandScape> getDataForViewPager() {
+
+    }
+
+    private ArrayList<LandScape> getDataForViewPaper() {
         ArrayList<LandScape> dsDuLieu = new ArrayList<>();
         LandScape landScape1 = new LandScape("kheops_pyramid", "Kim tự tháp - Ai Cập");
         dsDuLieu.add(landScape1);
-        dsDuLieu.add( new LandScape("sydneyoperahouse", "Nhà hát Sydney ÚC"));
-        dsDuLieu.add( new LandScape("tour_eiffel_at_sunrise_from_the_trocadero", "Tháp Eiffel - Pháp"));
+        dsDuLieu.add(new LandScape("sydneyoperahouse", "Nhà hát Sydney ÚC"));
+        dsDuLieu.add(new LandScape("tour_eiffel_at_sunrise_from_the_trocadero", "Tháp Eiffel - Pháp"));
         dsDuLieu.add(new LandScape("statue_de_la_liberte_new_york", "Tượng nữ thần tự do - Mỹ"));
         dsDuLieu.add(new LandScape("the_great_wall_of_china", "Vạn lý trường thành - Trung Quôc"));
         dsDuLieu.add(new LandScape("colosseum_in_rome_italy", "Đấu trường La Mã - Ý"));
